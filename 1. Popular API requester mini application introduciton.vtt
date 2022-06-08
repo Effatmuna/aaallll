@@ -1,0 +1,94 @@
+WEBVTT
+
+00:02.030 --> 00:09.170
+Welcome to our Ajax information API app application which is going to be built from scratch in upcoming
+
+00:09.170 --> 00:15.260
+lessons we're going to building out this application from scratch and what it does is it allows you
+
+00:15.260 --> 00:20.930
+to enter in any term term anything that you want and it connects to two different API.
+
+00:21.140 --> 00:28.270
+So it connects to the Wikipedia API as well as the YouTube API and returns back a whole ton of data.
+
+00:28.340 --> 00:33.770
+And then what we're doing is we're getting that response information and we're simply outputting it
+
+00:33.800 --> 00:35.360
+into our web page.
+
+00:35.390 --> 00:40.610
+So we've got an area up here where we're turning back the Wikipedia content and we're outputting some
+
+00:40.610 --> 00:42.780
+of it here within our H-2 mail.
+
+00:43.040 --> 00:50.510
+And also we're outputting four videos from YouTube that also notch that search request and you can see
+
+00:50.510 --> 00:57.970
+that there are a lot there is a lot of information that we have to work with within our guests on data.
+
+00:57.980 --> 01:04.550
+You can see that in the console as we loop through this content and we pull back the relevant information
+
+01:04.550 --> 01:07.480
+that we want to use and output it within our page.
+
+01:07.640 --> 01:10.970
+So we are going to be building this from scratch in upcoming lessons.
+
+01:10.970 --> 01:16.850
+And the one really nice thing about API is that you don't have to write all of this content so you have
+
+01:16.940 --> 01:24.570
+access to just a ton of content and a ton of information that's online available just within the API.
+
+01:24.770 --> 01:28.520
+And you can pull this information back and make use of it within your web page.
+
+01:28.790 --> 01:33.770
+And that's really the scope of the upcoming lessons is to get more comfortable and more familiar with
+
+01:33.770 --> 01:36.950
+making Ajax requests in javascript.
+
+01:36.980 --> 01:44.030
+Pulling back that data and then making use of that data within your application and then outputting
+
+01:44.030 --> 01:50.430
+it of course within the web page so you can style it as well as pull in additional information.
+
+01:50.450 --> 01:53.090
+You can try different API is as well.
+
+01:53.090 --> 02:00.890
+We build out a function that we pass in a couple parameters to and that does the char request using
+
+02:01.070 --> 02:07.640
+javascript and returning back response information and then we make use of that response data within
+
+02:07.700 --> 02:09.040
+our javascript.
+
+02:09.140 --> 02:13.390
+All of the source code is also included to get you started quickly.
+
+02:13.400 --> 02:19.370
+We also do a little bit of styling with C Ss to make our content a little bit more presentable and the
+
+02:19.370 --> 02:23.830
+core focus of the coming lessons really is javascript and Ajax.
+
+02:23.840 --> 02:28.290
+So when you're ready let's jump right in and start building out this application from scratch.
+
+02:28.520 --> 02:32.350
+And it is recommended as well that you follow within the lessons.
+
+02:32.390 --> 02:35.540
+Open up your own editor and try the code out for yourself.
+
+02:35.540 --> 02:36.290
+So let's begin.

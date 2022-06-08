@@ -1,0 +1,376 @@
+WEBVTT
+
+00:00.870 --> 00:08.010
+This lesson we're going to jump into our editor and we're going to build out and Ajax request using
+
+00:08.010 --> 00:12.080
+just plain javascript so no libraries and we're going to make it reusable.
+
+00:12.090 --> 00:16.560
+So wrap it into a function so that we can grab it and reuse the code.
+
+00:16.680 --> 00:20.250
+And then from the show results we'll call over to that function.
+
+00:20.250 --> 00:26.610
+So what we're going to pass in a parameter and that's going to be a U or L so is set up my U or L for
+
+00:26.610 --> 00:29.600
+that and for here we need to grab an end point.
+
+00:29.700 --> 00:31.570
+So your L that has an end point.
+
+00:31.630 --> 00:34.500
+A really easy one is random user api.
+
+00:34.530 --> 00:38.350
+So usually works without a lot of configuring or sending any headers.
+
+00:38.520 --> 00:40.920
+And let's add that you are all in there.
+
+00:40.920 --> 00:43.840
+So this is the end point that we want it to connect to.
+
+00:43.920 --> 00:47.480
+And now we're ready to build out our function.
+
+00:47.580 --> 00:49.020
+So let's do that now.
+
+00:49.020 --> 00:56.680
+So creating a function and this is where Ajax call is going to sit we can call it Ajax if we want a
+
+00:56.730 --> 01:04.950
+jocks J.S. and we need one parameter and that's the you are all.
+
+01:05.120 --> 01:10.480
+And also within here we're going to be returning back a callback.
+
+01:10.650 --> 01:17.220
+So we've got a callback function that we're loading in there and then within when we call that we're
+
+01:17.220 --> 01:20.070
+going to be doing a response function
+
+01:23.500 --> 01:25.480
+so it's we've got callback in there.
+
+01:25.500 --> 01:30.440
+I we move this up a bit add some space so it's more centered.
+
+01:30.650 --> 01:39.680
+So Ajax G-S So what it's going to do it's going to look like just a regular x M-L or a char object give
+
+01:39.690 --> 01:41.900
+it a variable name of X a char.
+
+01:42.260 --> 01:49.680
+So you SML HTP request this creates our request object
+
+01:52.540 --> 01:56.750
+and then with the HTP request we need to do two things.
+
+01:56.860 --> 02:03.790
+So what we need to open up that object specify a method we're going to be using get because all we're
+
+02:03.790 --> 02:05.460
+doing is we're not posting any data.
+
+02:05.460 --> 02:07.400
+All we're doing is retrieving data.
+
+02:07.780 --> 02:13.870
+And the next value is the you are l and whether we want it asynchronous so we're going to leave it as
+
+02:13.870 --> 02:20.760
+true for asynchronous exit char and then next what we need to do is just send it.
+
+02:20.800 --> 02:21.370
+So there we go.
+
+02:21.370 --> 02:25.280
+So we've created our Rick S.H. our request it's all been sent.
+
+02:25.300 --> 02:30.010
+And next we need to check for the ready state and the ready state changes.
+
+02:30.010 --> 02:34.720
+There's a number of different states there's actually five different states and we're going to be listening
+
+02:34.720 --> 02:38.800
+for a change on the ready state object.
+
+02:38.800 --> 02:45.610
+And when the ready state makes its change then we fire off a function and for analysis console log out
+
+02:45.700 --> 02:51.130
+that exits are just a console log out the whole X a char object.
+
+02:51.130 --> 02:57.790
+So next what we need to do is we need to set up our function to call for the Ajax and we want it to
+
+02:57.790 --> 03:00.750
+pass through this next thing that we want to do.
+
+03:00.790 --> 03:04.870
+We do want to make use of that newly created Ajax function that we just created.
+
+03:04.870 --> 03:12.240
+So let's set that up and in here we need to pass in a U or L and also we're going to do a callback function.
+
+03:12.430 --> 03:18.610
+So this function is going to respond back with the response data that's going to be sent from the Ajax
+
+03:18.610 --> 03:22.800
+request and what we want to do is console log this.
+
+03:22.900 --> 03:30.120
+So this is response to a console log the response object and we're still not returning anything yet.
+
+03:30.130 --> 03:38.530
+So let's let's set that up as well so we're Konsole logging out the X a char on change and we're also
+
+03:39.010 --> 03:40.450
+going to call back.
+
+03:40.480 --> 03:45.940
+So we just use that function call box to the one that we're stating in here that is going to get fired
+
+03:45.940 --> 03:52.450
+off and that's going to be a call that to over here so call back and within the callback we'll just
+
+03:52.540 --> 03:55.180
+return back ready.
+
+03:55.780 --> 03:58.310
+Change for now and we'll update that later on.
+
+03:58.710 --> 04:00.280
+So let's try that out.
+
+04:00.280 --> 04:01.000
+So there we go.
+
+04:01.000 --> 04:04.940
+So we clicked it and we fired off our click.
+
+04:04.960 --> 04:07.750
+So we don't actually need this one anymore.
+
+04:08.230 --> 04:09.930
+That one's a little bit redundant there.
+
+04:09.940 --> 04:14.910
+We know that we've clicked it when we see something happening and we see that ready state change over
+
+04:14.900 --> 04:15.320
+time.
+
+04:15.340 --> 04:16.880
+The ready state changes.
+
+04:16.990 --> 04:22.690
+We fire off and we get that callback function which is actually what we're logging out here with that
+
+04:22.690 --> 04:23.700
+response there.
+
+04:23.830 --> 04:29.120
+So every time it changes it fires off we get the console log of the entire ready state object.
+
+04:29.140 --> 04:31.940
+And here we can see that we go through all the ready States here.
+
+04:31.990 --> 04:35.890
+So we start out at zero and dirty state changes to 1.
+
+04:35.920 --> 04:39.050
+Then we fire off this function where the state changes to two.
+
+04:39.090 --> 04:44.250
+We fire off the function three four and then finally when it gets to four then.
+
+04:44.270 --> 04:51.310
+Thus this is where we get our information such as the status of 200 and we see that ready state is four.
+
+04:51.310 --> 04:55.530
+So this is the one that we're ultimately after we want to make sure that it gets to ready state for
+
+04:55.750 --> 04:57.940
+and once it does then we should have.
+
+04:58.030 --> 05:05.040
+Once it does and status is 200 then we should have some response text there ready to go.
+
+05:05.170 --> 05:12.190
+So let's update our function to match that and actually return back that object information.
+
+05:12.730 --> 05:18.820
+So instead of ready state change we need to have a few other parameters here that is going to be looking
+
+05:18.820 --> 05:22.600
+to make sure that our experts our object is ready to go.
+
+05:23.970 --> 05:30.120
+So we're going to have a condition here and SH are ready states are going to look at the ready state
+
+05:30.120 --> 05:34.920
+value and just like over here that ready state is for it.
+
+05:34.940 --> 05:37.100
+That's the value that we're looking for.
+
+05:37.100 --> 05:44.030
+So we make sure it's ready state is for and we're also going to make sure that the S.H. our status is
+
+05:44.120 --> 05:45.720
+equal to 200.
+
+05:45.740 --> 05:51.140
+Now you could potentially go with just the ready state for but usually it's better to have two checks
+
+05:51.350 --> 05:55.780
+just to make sure your status is 200 in case the status comes back to 404.
+
+05:55.880 --> 05:59.690
+And then you try to get a response text and you encounter some type of error.
+
+05:59.960 --> 06:01.500
+So let's account for that.
+
+06:01.550 --> 06:11.480
+And then once that condition is met then we know that we can have our object there are data.
+
+06:12.270 --> 06:17.880
+And what we can do is we can do a J on parce because it's coming back within a string format and we're
+
+06:17.880 --> 06:19.240
+expecting Jaison.
+
+06:19.260 --> 06:25.740
+So the only API is that we're connecting to are going to be all saw formatted and then now Scrubb from
+
+06:25.960 --> 06:32.070
+a char object that response text and send back.
+
+06:32.100 --> 06:35.000
+And we're still just logging whatever that responses.
+
+06:35.250 --> 06:38.290
+So now we make some changes we should try it out.
+
+06:38.310 --> 06:39.690
+Just make sure it works.
+
+06:39.690 --> 06:41.080
+So what's going to happen now.
+
+06:41.100 --> 06:46.360
+When I click the button we've got our event listener here listening for the button click.
+
+06:46.830 --> 06:52.700
+Let me move that in so we can actually see we could also break that up into several lines.
+
+06:52.700 --> 06:55.840
+But because I'm on a half screen here it is a little bit hard to see.
+
+06:55.950 --> 06:58.310
+But basically we click the Search button.
+
+06:58.530 --> 07:05.660
+We have that event handler which fires off the show results function show results function passes in
+
+07:05.670 --> 07:07.160
+all we've got to you are all here.
+
+07:07.170 --> 07:13.110
+So it passes that you are l and has a callback function here where we do something with data on the
+
+07:13.110 --> 07:19.900
+response and then what we're doing is we're just simply Konsole logging it out and in upcoming lessons
+
+07:19.900 --> 07:26.000
+we're going to actually output it so we're just making sure that our Ajax G-S function is working properly.
+
+07:26.020 --> 07:29.930
+So next over here is the Ajax to use function takes two parameters.
+
+07:29.950 --> 07:35.090
+So your L and call back and we're loading that X a char object.
+
+07:35.230 --> 07:40.220
+We're opening it up and we're sending it to the Eurail that was sent within the parameters.
+
+07:40.360 --> 07:46.750
+And then on ready state change we're listening for the ready state for status to be 200 because then
+
+07:46.780 --> 07:51.120
+we know that we can get the H.R. response text whatever that might be.
+
+07:51.220 --> 07:56.740
+And we're using js on Parse to return it back in a Jaison format object.
+
+07:56.740 --> 07:59.180
+So that should load out within the console.
+
+07:59.440 --> 08:01.420
+So after all of that let's try that.
+
+08:01.420 --> 08:02.010
+So there we are.
+
+08:02.020 --> 08:08.260
+So we did get the results back and we can also customize this if we just wanted the info we could get
+
+08:08.260 --> 08:10.660
+the info there if we wanted the results.
+
+08:10.660 --> 08:12.430
+This is within an array format.
+
+08:12.430 --> 08:15.300
+And at this point we could actually loop through the results.
+
+08:15.370 --> 08:17.000
+So more on this coming up.
+
+08:17.020 --> 08:24.700
+We just wanted to make sure that our Ajax G-S or AJAX call in javascript is fully functional.
+
+08:24.730 --> 08:30.790
+Returning back that response data and then this is a function that we can reuse over and over again
+
+08:30.790 --> 08:35.950
+because it's so is going to return back whatever that response text and we can customize it for however
+
+08:35.950 --> 08:39.320
+we need it because we are connecting to do two different endpoints.
+
+08:39.370 --> 08:44.340
+We're going to connect to Wikipedia and we're also going to connect to the YouTube API.
+
+08:44.560 --> 08:51.490
+So the idea here is that we've got an input field the user enters in a search term we return back some
+
+08:51.580 --> 08:58.520
+Wikipedia information and we also return back for sample videos that they can click and open up on YouTube.
+
+08:58.540 --> 09:01.440
+So building the site is coming up next.
+
+09:01.450 --> 09:07.380
+Try it for yourself open up your editor and make sure that this function is ready to fire off.
+
+09:07.420 --> 09:13.540
+You can try various API endpoints as well just to make sure that you are getting that response information
+
+09:13.630 --> 09:14.490
+in there.
+
+09:14.500 --> 09:17.320
+So go ahead and try out for yourself and next lesson.
+
+09:17.350 --> 09:18.810
+We're going to continue to build the suit.

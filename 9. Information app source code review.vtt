@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00.450 --> 00:08.100
+Let's go out and do one final test of our application we can close our console window refresh and now
+
+00:08.100 --> 00:09.230
+we can search for a topic.
+
+00:09.240 --> 00:13.690
+So javascript we get some information and we get links to videos.
+
+00:13.860 --> 00:15.520
+Let's try something else.
+
+00:15.570 --> 00:16.470
+AJAX.
+
+00:16.470 --> 00:17.580
+See what happens.
+
+00:17.580 --> 00:21.870
+So we've got search term Ajax and we could get more specific.
+
+00:21.870 --> 00:27.160
+So maybe this one isn't a great search term Jason.
+
+00:27.160 --> 00:30.070
+So Jason there's a bunch of information on Jason.
+
+00:30.160 --> 00:34.750
+So it's not really up to you whatever the search terms and whatever information you want to pull back.
+
+00:34.810 --> 00:38.580
+You can really fine tune and customize this to suit your needs.
+
+00:38.650 --> 00:43.600
+And we've got all of the source code again included as well as always happy to help within the Q and
+
+00:43.600 --> 00:44.530
+A section.
+
+00:44.530 --> 00:50.860
+So now let's do a quick overview of our source code and just to review what we've been working on in
+
+00:50.860 --> 00:52.160
+the previous lessons.
+
+00:52.180 --> 00:59.320
+So we did some styling and this was one of the last lessons making it look or more presentable with
+
+00:59.330 --> 01:05.050
+the YouTube content we had to divide our Wiki and YouTube we have a button here we have an input for
+
+01:05.050 --> 01:10.030
+the search term but we had to divide out the output for the wiki and the YouTube because when you send
+
+01:10.030 --> 01:16.260
+an AJAX call it's asynchronous so it doesn't we don't know which one is coming back first.
+
+01:16.360 --> 01:22.030
+And because we're making too AJAX calls we want to make sure that the content comes back first for the
+
+01:22.030 --> 01:27.450
+wiki on top and that YouTube's second Otherwise your page isn't going to be consistent.
+
+01:27.460 --> 01:28.720
+So you got to keep that in mind.
+
+01:29.530 --> 01:33.800
+We built out a simple function to do AJAX calls.
+
+01:33.810 --> 01:37.700
+It's got requests to parameters so your L-N callback.
+
+01:37.890 --> 01:43.020
+So we do our S.H. our object we open and send it to you URL.
+
+01:43.200 --> 01:44.400
+So that's all down here.
+
+01:44.550 --> 01:46.910
+And then we listen for the ready state changes.
+
+01:47.010 --> 01:50.840
+And then this is the second part of it because the ready state changes.
+
+01:51.000 --> 01:58.770
+And then whenever it does change until it Reith's race state 4 and status 200 we don't finish off the
+
+01:58.820 --> 02:03.900
+callback and within the callback we're parsing back as Jaison formatted data.
+
+02:03.900 --> 02:11.250
+So we're taking that request text response text and parsing it as song because we're using it as a javascript
+
+02:11.250 --> 02:14.800
+object within our callback function.
+
+02:14.850 --> 02:21.390
+So all we had is one function that fires off whenever we click the button and that's the search over
+
+02:21.390 --> 02:22.030
+here.
+
+02:22.080 --> 02:25.760
+So we grab the search term we have a you are l.
+
+02:25.770 --> 02:33.230
+So for our API and point we also create variables to hold the objects of the dorm elements.
+
+02:33.420 --> 02:38.210
+So the two that we want it to output to we set some default values in here.
+
+02:38.970 --> 02:42.430
+And then we've got the first AJAX calls to Wikipedia.
+
+02:42.660 --> 02:48.780
+So when we get that content back within their response object we basically we loop through it and we
+
+02:48.780 --> 02:55.710
+output it into that output area that is expecting the content and then we've got our second AJAX call.
+
+02:55.710 --> 03:01.040
+So this one is going out to YouTube and this is doing the same thing using the same function and it's
+
+03:01.500 --> 03:04.360
+we're putting in some of the values there as variables.
+
+03:04.440 --> 03:09.300
+You don't have to do it this way you could just simply paste this into your inner Each him.
+
+03:09.390 --> 03:11.250
+So it's up to you however you want to do that.
+
+03:11.310 --> 03:16.910
+We're looping through all the data items that are being returned and we're building out some H2 M-L
+
+03:16.950 --> 03:20.540
+there which was the purpose of all of the styling.
+
+03:20.640 --> 03:22.180
+So it looks nice and neat.
+
+03:22.230 --> 03:30.030
+So at the end of the day we're making two Ajax requests to two different places sources of data and
+
+03:30.060 --> 03:33.090
+we're making use of that data within each 2 mil page.
+
+03:33.090 --> 03:34.070
+So now it's up to you.
+
+03:34.170 --> 03:35.460
+Try this out for yourself.
+
+03:35.640 --> 03:36.600
+Improve upon it.
+
+03:36.600 --> 03:38.310
+There's a lot of room to improve on this.
+
+03:38.310 --> 03:41.100
+There is a lot of data coming back from each one of these streams.
+
+03:41.100 --> 03:43.730
+You can include another AJAX call if you want.
+
+03:43.740 --> 03:45.020
+It's really up to you.
+
+03:45.090 --> 03:52.740
+Practice Ajax get more familiar with it and get more familiar with working with the various API is returning
+
+03:52.740 --> 03:59.220
+back data from those various API and then making use of that content that's being returned back into
+
+03:59.220 --> 03:59.670
+your.
+
+03:59.760 --> 04:00.600
+HTML page.
+
+04:00.690 --> 04:03.690
+So it's visible and usable for your users.
+
+04:03.690 --> 04:08.510
+And one of the great things about these API is that you don't have to write up all this content.
+
+04:08.610 --> 04:10.190
+So it's all there at the ready.
+
+04:10.240 --> 04:16.140
+All you have to do is make that connection grab that data and then you can output it for your web visitors
+
+04:16.230 --> 04:18.370
+and your application users
+
+04:21.210 --> 04:26.730
+and all of the source code again is included so that you can get started really quickly building out
+
+04:26.730 --> 04:30.130
+the same type of application and then update the code.
+
+04:30.210 --> 04:36.200
+Try it out and experiment a little bit with what the syntax is doing and what the code is doing.

@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.790 --> 00:03.790
+Further YouTube API we are going to need a key.
+
+00:03.850 --> 00:09.950
+But the good thing is that we can actually reduce our Ajax G-S function to pull that information back.
+
+00:09.970 --> 00:15.940
+So the idea here is that we're going to use AJAX to yes output our wikis stuff and then do another Ajax
+
+00:15.940 --> 00:19.250
+G-S and output our YouTube content.
+
+00:20.980 --> 00:25.100
+So let's open up our editor and YouTube.
+
+00:25.800 --> 00:29.190
+Unlike worth the wiki it's not an open API.
+
+00:29.280 --> 00:30.980
+You do need an API key.
+
+00:31.170 --> 00:35.550
+So there is some stuff that you're going to need to do in order to get that AP Ickey.
+
+00:35.790 --> 00:38.580
+And first of all you need a Google account.
+
+00:38.850 --> 00:43.430
+So if you don't have a Google account already then you can go out and set a Google account.
+
+00:43.440 --> 00:50.130
+Most of you should have a Google account so go over to Google dot com forward slash accounts you account
+
+00:50.160 --> 00:56.070
+to create a new account if you need to create a new account and once you've created account so all accounts
+
+00:56.070 --> 00:58.940
+have ability to go over to the developers cons..
+
+00:58.950 --> 01:04.830
+So let me open up the developers console and I've already got a few apps in here and so on.
+
+01:04.830 --> 01:09.280
+I've already gone to YouTube one but we'll create another one within the upcoming.
+
+01:09.480 --> 01:19.110
+Within this lesson as well so that I can walk you through how to create that and within the Google console
+
+01:19.140 --> 01:25.530
+the developers console you've got to get your application registered so you can create a brand new application.
+
+01:25.520 --> 01:29.750
+It's got some information here how to create a brand new application.
+
+01:29.790 --> 01:32.330
+So let's go ahead and create a brand new one.
+
+01:33.570 --> 01:41.580
+So going into projects we're going to create a brand new project we're going to Ajax and we'll just
+
+01:41.610 --> 01:43.100
+create it there.
+
+01:43.890 --> 01:44.520
+So there we go.
+
+01:44.520 --> 01:49.410
+So we've created a brand new project and you're going to need to create a project in order to have a
+
+01:49.410 --> 01:56.310
+bunch of API to get those API and so on and so next thing that you do once you've created the project
+
+01:57.150 --> 01:59.260
+you can open up the API library.
+
+01:59.290 --> 02:04.140
+It's got all of the links here on this one page which is nice and convenient and you see that it opens
+
+02:04.140 --> 02:06.410
+up that developers console again.
+
+02:06.840 --> 02:09.520
+So here is where we select our project.
+
+02:09.540 --> 02:17.850
+So go ahead and select a project and what we need is we need a YouTube API V3 and then go ahead and
+
+02:17.850 --> 02:18.880
+enable it.
+
+02:19.410 --> 02:22.420
+And once you enable it you're going to have to create a key as well.
+
+02:22.620 --> 02:26.160
+And of course they walk you through here as well how to do that.
+
+02:26.190 --> 02:27.780
+So it does take a little bit of time.
+
+02:28.140 --> 02:34.820
+And then next you need to get your API key so you can do create credentials web browser Ajax.
+
+02:34.860 --> 02:41.020
+So there is a generator or API key and then you can copy this one over done.
+
+02:41.130 --> 02:45.040
+So it's Siri to go you've got an API key that you can use.
+
+02:45.110 --> 02:49.000
+It's unrestricted and you are going to have to create your own.
+
+02:48.990 --> 02:54.180
+Because I am going to have to disable this one after I do launch this video.
+
+02:54.330 --> 02:59.690
+So just for warning that you do need to create your own API key for the stuff.
+
+03:00.640 --> 03:04.830
+So we are ready to hook to that YouTube API.
+
+03:05.110 --> 03:08.800
+So what I usually like to do when I just grab the key.
+
+03:08.800 --> 03:14.740
+So where I'm going to be using it I like to just paste the key there because this is going to be something
+
+03:14.740 --> 03:16.870
+that we're going to have to make use of.
+
+03:17.290 --> 03:20.950
+So the next part of it is connecting over to the YouTube API.
+
+03:23.110 --> 03:36.380
+So the path for that is HTP as coal and forward slash forward slash w w w Google API is forward slash
+
+03:36.620 --> 03:43.530
+YouTube for its slash v3 for Slash search because that's what we want to do.
+
+03:45.860 --> 03:53.400
+And then we need some parameters so we're passing in part so we're getting snippet and key.
+
+03:53.420 --> 03:56.580
+So this is where you need to add in the key value.
+
+03:56.930 --> 04:00.500
+And then all we need to do is have a query turn.
+
+04:01.340 --> 04:06.690
+So there is our key and Qs sets for the query term.
+
+04:07.040 --> 04:08.970
+So this is whatever the term is.
+
+04:09.490 --> 04:14.540
+We just do test for now and then we've also got Naks results
+
+04:17.840 --> 04:21.860
+and this is where we can specify how many results we want back.
+
+04:21.860 --> 04:27.020
+So let's first of all let's try that out and this should work within your browser and it's always a
+
+04:27.020 --> 04:30.390
+good idea to test that out within your browser.
+
+04:30.440 --> 04:30.940
+So there you go.
+
+04:30.940 --> 04:32.750
+So we were able to search.
+
+04:32.780 --> 04:34.290
+We got a bunch of data back.
+
+04:34.430 --> 04:36.590
+So we were ready to move on to the next step.
+
+04:36.590 --> 04:42.410
+That's where we can actually make use of this data within our Web page and we can see that it's got
+
+04:42.410 --> 04:44.880
+some interesting stuff here so it's got thumbnails.
+
+04:45.020 --> 04:49.790
+We're going to make use of these pull these thumbnails title description so we can pull this information
+
+04:49.790 --> 04:56.990
+back as well and we can then also link out to the video because they've got the video IDs there.
+
+04:56.990 --> 05:02.540
+And YouTube is just by video ID can just create the you elf to link to it.
+
+05:02.540 --> 05:04.010
+So we're all ready to go.
+
+05:04.010 --> 05:08.900
+So that's the data that we need in order to continue to build out our application.
+
+05:08.900 --> 05:17.420
+So next lesson is to jump back into our editor and continue to build out our Ajax request to the YouTube
+
+05:17.480 --> 05:19.500
+API because now that we know that's working.
+
+05:19.730 --> 05:24.800
+So if you haven't done so go ahead and set up and get your own API key because you are going to need
+
+05:24.800 --> 05:27.550
+it for the next lesson.

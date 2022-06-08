@@ -1,0 +1,337 @@
+WEBVTT
+
+00:01.260 --> 00:07.460
+Welcome back and this lesson we need to do something with the data that's being returned back.
+
+00:07.560 --> 00:15.480
+So it looks like we're getting 10 items and we're getting an array with variations here so the top one
+
+00:15.480 --> 00:21.210
+here just tells us back our search term and some additional terms to search for the next one gives us
+
+00:21.210 --> 00:23.800
+some information for those terms.
+
+00:23.850 --> 00:29.160
+And then lastly we've got the links to find out more details about those terms so we can make use of
+
+00:29.220 --> 00:35.700
+all of this data and what we want to do is we want to loop through all four of these different items
+
+00:35.700 --> 00:41.500
+here that are contained within the array and then from these arrays Let's just grab the first item so
+
+00:41.510 --> 00:43.540
+whatever the index zero is.
+
+00:43.590 --> 00:46.330
+So that's what we want to output on our page.
+
+00:46.410 --> 00:52.710
+And this is a little bit of a challenge but what I want you to do is think about how we can output how
+
+00:52.710 --> 00:58.100
+we can loop through the array get all of this information and then output it within our Web page.
+
+00:58.230 --> 01:04.180
+So it's open up her editor and jump in and start doing some javascript coding so I can get rid of these
+
+01:04.230 --> 01:10.230
+console logs and over here so this is where we're actually returning back that response information
+
+01:10.500 --> 01:14.450
+from that function that we created.
+
+01:14.460 --> 01:21.700
+So this is where we are ideally want to do something with that data and also in preparation for output.
+
+01:21.840 --> 01:24.780
+Let's stop object up as well.
+
+01:24.780 --> 01:25.970
+So document.
+
+01:26.390 --> 01:28.530
+And we can use query selector.
+
+01:28.530 --> 01:32.330
+We could also use get element by ID.
+
+01:32.610 --> 01:35.670
+So I'm going to grab output and we're using query selector.
+
+01:35.760 --> 01:40.420
+Make sure that if it's an ID you use the hash.
+
+01:40.590 --> 01:42.690
+If it's a class use the dot.
+
+01:42.690 --> 01:45.890
+If it's just a tag name they just use the regular tag name.
+
+01:46.050 --> 01:53.070
+And we do want to capture that entire element content in an object so that we can output that information
+
+01:53.130 --> 01:54.870
+directly on our Web page.
+
+01:54.870 --> 01:58.820
+So now that we're getting a response here we need to loop through that response.
+
+01:58.830 --> 02:00.440
+So let's do something with that.
+
+02:00.600 --> 02:07.950
+We use a for loop but set up variable x and in in response console log out these values.
+
+02:07.950 --> 02:17.930
+Before we try to place that on our Web page and we're going to console log out the value of x so x response.
+
+02:17.940 --> 02:18.690
+So we're grabbing.
+
+02:18.690 --> 02:24.540
+We know that this is an array and we've got a number of array items.
+
+02:24.570 --> 02:29.760
+So by index an X is going to serve as the index value or we can first.
+
+02:29.790 --> 02:34.940
+Let's let's just put X so that you can see what this is going to look like.
+
+02:35.100 --> 02:40.640
+And before we go out there we've got to make sure that we're outputting response so let's try that out.
+
+02:40.650 --> 02:46.640
+So refresh search and we see we've got the index values so X is essentially just the index value.
+
+02:46.770 --> 02:53.130
+So this is the same thing that we would get if we did four loops so variable x equals zero increment
+
+02:53.130 --> 02:56.180
+X by 1 every time we iterate through a different item.
+
+02:56.430 --> 02:59.340
+So this we know that if we do response.
+
+02:59.380 --> 03:01.300
+So I missed it there.
+
+03:02.010 --> 03:07.400
+And we use X as our index value and we refresh.
+
+03:07.560 --> 03:10.080
+We get all of this information coming out.
+
+03:10.110 --> 03:12.480
+So these are arrays as well.
+
+03:12.540 --> 03:16.800
+And we only want to return back maybe that first item that's available within that array.
+
+03:16.920 --> 03:21.130
+So we see that we get three different arrays and we've got javascript there.
+
+03:21.390 --> 03:23.210
+So let's try this now.
+
+03:23.250 --> 03:27.750
+And because these are all arrays so the format is fairly standard.
+
+03:27.760 --> 03:33.450
+We just want to grab the first one we get javascript we get information about javascript and the link.
+
+03:33.570 --> 03:39.710
+And notice we've got a problem here with the first one because this one wasn't in an array format.
+
+03:39.840 --> 03:44.610
+And you're going to get this sometimes when you're working with different API is that you've got to
+
+03:45.000 --> 03:47.800
+massage it a little bit and just make it work.
+
+03:47.850 --> 03:55.860
+So we know that if X is zero then we just grab the value of x so we see that that's not going to work.
+
+03:55.860 --> 03:59.340
+So let's try a few different things so we can do a length.
+
+03:59.340 --> 04:02.880
+We need a way to distinguish the different streams.
+
+04:02.880 --> 04:06.830
+So we see that when we do length they all come back as 10.
+
+04:07.010 --> 04:14.670
+What if we do type of type of response X refresh and we see the first one is a string the other three
+
+04:14.670 --> 04:15.570
+are objects.
+
+04:15.720 --> 04:16.740
+So that will work.
+
+04:16.890 --> 04:21.490
+So now we can form a condition around it so we found our way to distinguish the two.
+
+04:21.510 --> 04:26.900
+So let's create a variable collet holder and we're going to check we're going to do a ternary operator
+
+04:26.910 --> 04:31.160
+so we're going to check to see if the type of is string.
+
+04:31.650 --> 04:37.430
+And if this is true then what we want to do open this up bigger.
+
+04:37.460 --> 04:44.660
+So if the type of is string then what we want to do with it is we're fine with it.
+
+04:44.660 --> 04:51.170
+We don't have to get the first item there so we're just going to return back response of X and if it's
+
+04:51.230 --> 05:00.300
+not the string then we want to grab that first item in the array and then let's put holder.
+
+05:00.320 --> 05:06.760
+Just to make sure that everything is good before we try to put it again into our web page.
+
+05:06.770 --> 05:08.230
+So let's go back out.
+
+05:08.240 --> 05:10.760
+Refresh search for Javascript.
+
+05:10.760 --> 05:13.150
+So our first one is javascript.
+
+05:13.160 --> 05:19.190
+Second one is returning back information and we see that those two first ones are the same actually.
+
+05:19.310 --> 05:21.980
+So we don't even need to make use of that first one.
+
+05:22.160 --> 05:27.800
+So we could just completely skip it altogether or we could append a two or each to Malthus's number
+
+05:27.800 --> 05:28.860
+of different options here.
+
+05:28.910 --> 05:30.060
+At this point.
+
+05:30.110 --> 05:35.400
+So let's go ahead and we'll keep that one and we could also do a loop starting at 1.
+
+05:35.450 --> 05:39.330
+If we are sure that we're not returning back anything of value.
+
+05:39.500 --> 05:40.970
+But let's keep it this way.
+
+05:41.060 --> 05:44.790
+And then of course you can you can update it as needed.
+
+05:45.050 --> 05:47.470
+So we're ready to output some content.
+
+05:47.600 --> 05:53.160
+We've set up our output element which is all ready to receive that information.
+
+05:53.300 --> 05:54.680
+I'm going to clean this up a bit.
+
+05:54.710 --> 05:56.800
+So it's a little bit more readable.
+
+05:56.810 --> 06:00.440
+So over here we're here this is where we're calling our function.
+
+06:00.440 --> 06:02.620
+We're getting our response content.
+
+06:02.720 --> 06:05.420
+We're looping through that response content.
+
+06:05.540 --> 06:09.700
+And if it's a string value then we're just returning it as is.
+
+06:09.710 --> 06:15.440
+If it's an array or if it's an object then we're grabbing that first item by the index and then we're
+
+06:15.440 --> 06:18.170
+just opening and Holder.
+
+06:18.250 --> 06:20.890
+So we are ready to make some updates.
+
+06:22.650 --> 06:25.370
+So first of all let's do output.
+
+06:25.440 --> 06:27.950
+H to M-L and make this big.
+
+06:28.050 --> 06:35.060
+We'll do H-2 and we know what the search term is because we've got a search term that we're grabbing
+
+06:35.070 --> 06:41.520
+from the input so we can just use that variable holder that we've created in H HMO and we're going to
+
+06:41.520 --> 06:46.650
+concatenate it together with whatever is already existing there so that search term will be there and
+
+06:46.650 --> 06:52.050
+we can add in our content because we know that this is all within a string format and div.
+
+06:52.080 --> 06:52.880
+So there we go.
+
+06:53.160 --> 06:55.740
+And we can also add in a class if we want.
+
+06:56.070 --> 07:01.860
+So if we want to return it in some type of different nice format make it look different turn make it
+
+07:01.860 --> 07:07.020
+look better so we can use a class as well and we'll call it output data output.
+
+07:07.180 --> 07:16.380
+We can go up to our style let's add some styling there so padding 10 picks border make it fairly late.
+
+07:16.560 --> 07:18.030
+Let's see what this looks like now.
+
+07:18.240 --> 07:25.080
+So go back refresh and now we should get some content being shown over here.
+
+07:25.110 --> 07:25.490
+So there we go.
+
+07:25.490 --> 07:32.730
+So search term javascript we get javascript javascript information both javascript and you are able
+
+07:32.730 --> 07:39.150
+to link to that so great we are ready to move on to our next step and that's going to be hooking up
+
+07:39.150 --> 07:39.940
+YouTube.
+
+07:40.140 --> 07:48.060
+So we ultimately want all of this to show up and then down below let's show up for links to videos.
+
+07:48.060 --> 07:51.420
+We're going to just use the thumbnails that are returned back from YouTube.
+
+07:51.660 --> 07:56.130
+So now I want you to build the suit within your own application.
+
+07:56.190 --> 07:56.720
+Try it.
+
+07:56.790 --> 07:58.290
+Make sure it's working.
+
+07:58.290 --> 08:05.140
+Make sure that you're able to get that response information and then output it within your two Mel page.
+
+08:05.150 --> 08:08.320
+So coming up is YouTube and that's going to be really exciting.

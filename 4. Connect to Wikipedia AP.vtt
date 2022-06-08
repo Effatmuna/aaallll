@@ -1,0 +1,265 @@
+WEBVTT
+
+00:00.090 --> 00:04.130
+Let's update our application in this lesson and make it a little bit more dynamic.
+
+00:04.130 --> 00:12.150
+So we need an input just a regular text input and I've already used search within the ID search term
+
+00:12.710 --> 00:15.460
+and value for the value right now.
+
+00:15.480 --> 00:17.420
+Maybe it can be something like javascript.
+
+00:17.590 --> 00:21.990
+That's a very relevant term to be searching within a javascript course.
+
+00:22.200 --> 00:25.330
+So let's refresh and we've got Javascript.
+
+00:25.410 --> 00:29.740
+And what we want to do is be able to click the Search button and search Wikipedia.
+
+00:29.940 --> 00:35.160
+So the reason Wikipedia is pretty cool is because it's got a lot of information and it's got a really
+
+00:35.160 --> 00:36.390
+flexible API.
+
+00:36.390 --> 00:40.100
+So there's some information on it of course about the API.
+
+00:40.230 --> 00:42.270
+So they've got the basic end point.
+
+00:42.270 --> 00:51.360
+So action Querrey titles titles mean page there's some information here that you don't necessarily need
+
+00:51.850 --> 00:54.990
+a format Jaison format version 2.
+
+00:54.990 --> 01:00.500
+There's a bunch of information here and basically this can return back some content within a Jaison
+
+01:00.510 --> 01:01.260
+format.
+
+01:01.260 --> 01:06.260
+And of course you could click that and you can see that this is information that we're returning back.
+
+01:06.330 --> 01:10.270
+So we're going to use a more stripped down version of the you or I.
+
+01:10.440 --> 01:17.510
+So we've got our API ph P format Jason action open search and our search term.
+
+01:17.520 --> 01:24.720
+So javascript there and this is also really important so that Orjan asked equals Asterix is super important.
+
+01:24.900 --> 01:26.450
+And let me show you why.
+
+01:26.460 --> 01:30.500
+So let's open up our application that we were building out go over here.
+
+01:30.510 --> 01:37.210
+We're going to replace this placeholder random user with that and this time let me remove it.
+
+01:37.320 --> 01:38.750
+Origin.
+
+01:38.880 --> 01:43.410
+So refresh search and we get this curus error.
+
+01:43.440 --> 01:51.120
+So you're going to encounter this this happens very often that you get this no control allow origin.
+
+01:51.120 --> 01:58.920
+This is a coures error and this error is triggered if you're trying to get connect to an API across
+
+01:59.520 --> 02:06.540
+different domains and it's very common Your host is a lot of times if you're unfamiliar with API or
+
+02:06.540 --> 02:11.190
+if it's on an API that you've set up that you're trying to connect to these you or else.
+
+02:11.280 --> 02:16.300
+And Wikipedia has a really nice solution for it because it's comparison.
+
+02:16.320 --> 02:19.850
+Some of that header information using origin strikes.
+
+02:19.860 --> 02:25.860
+That's why I said it's really super important to make sure that you include that because now when I
+
+02:25.860 --> 02:28.990
+refresh it we actually get some information back.
+
+02:29.010 --> 02:32.120
+So we've got javascript javascript engine.
+
+02:32.220 --> 02:38.270
+So you've got three different values here that are being returned back.
+
+02:38.380 --> 02:42.210
+And so it's got a number of different search terms here and the first story.
+
+02:42.300 --> 02:48.690
+It's got our search value there in that array and it's not actually getting this file yet from the input
+
+02:48.750 --> 02:55.290
+and we are going to hook that up next it's giving us some information about the API.
+
+02:55.300 --> 03:01.330
+So this is all being returned back within Enry format but it's also within a string format so we can
+
+03:01.330 --> 03:07.750
+pull back this information and simply output it on our Web page and we can go through this survey if
+
+03:07.750 --> 03:14.410
+we want or we can just use the first orbed the first item in the array that's being returned back.
+
+03:14.420 --> 03:15.850
+So let's try this out.
+
+03:16.040 --> 03:19.550
+And this actually could vary depending on what our search term is.
+
+03:19.550 --> 03:22.640
+So you've got to be really careful about making it too static.
+
+03:22.640 --> 03:27.960
+We want the more dynamic we can make our application the better off we're going to.
+
+03:28.350 --> 03:36.730
+Let's start by grabbing our search term and the search term here is can be added in within the U r l.
+
+03:36.770 --> 03:37.750
+So let's add that.
+
+03:37.760 --> 03:40.420
+So we need to grab that information first.
+
+03:40.490 --> 03:49.280
+So let's do a search term we use query selector query selector is sometimes one of my favorite ones
+
+03:49.280 --> 03:50.330
+to use.
+
+03:50.330 --> 03:51.660
+There's always different ways.
+
+03:51.660 --> 03:55.720
+Could a given in an ID and grabbed it by Dokument get element by ID.
+
+03:55.730 --> 03:59.530
+So that's one of the most standard ways to do this.
+
+03:59.690 --> 04:05.780
+This time we're going to grab the input and we're grabbing input with the name.
+
+04:05.780 --> 04:10.850
+And this way we can make our selection and this one has a name of search term.
+
+04:10.850 --> 04:17.720
+And one of the things to also to keep in mind when you are using IDs by default the browser will take
+
+04:17.720 --> 04:23.230
+these in as objects so you don't actually have to do get element by id search.
+
+04:23.240 --> 04:30.530
+You could just do search so some browsers will do that and that's why I don't always prefer using IDs
+
+04:30.860 --> 04:33.520
+and especially if setting variables for the objects.
+
+04:33.680 --> 04:36.880
+Because this has already been done by default and some of the browsers.
+
+04:36.890 --> 04:38.190
+So just keep that in mind.
+
+04:38.270 --> 04:44.370
+That's why doing it this way with the query selectors is a little bit better but it's up to you.
+
+04:44.390 --> 04:50.600
+So now whenever we click it and actually we don't have anything that's doing anything with that value
+
+04:50.600 --> 04:51.290
+that we took.
+
+04:51.320 --> 04:55.750
+So let's update that to be a search term.
+
+04:55.820 --> 05:03.500
+So just copy that out get rid of javascript and of course we already have a default value of a script
+
+05:03.500 --> 05:05.690
+so nothing should change.
+
+05:05.840 --> 05:08.870
+But it's just how we're getting that data.
+
+05:08.870 --> 05:15.600
+So when I click Search we're searching for javascript and it looks like something went wrong there.
+
+05:16.070 --> 05:20.570
+So let's quickly output our search term in the console.
+
+05:20.600 --> 05:21.980
+So what do you think happened here.
+
+05:22.010 --> 05:26.720
+What do you think went wrong and we see that we're not grabbing the value.
+
+05:26.780 --> 05:31.890
+So whenever you're using inputs you've got to make sure that you grab the value.
+
+05:32.000 --> 05:36.100
+So we're just doing grabbing that whole element as an object.
+
+05:36.180 --> 05:39.020
+But we want to make sure we're grabbing the value.
+
+05:39.020 --> 05:41.700
+So next we click it we've got our javascript.
+
+05:41.810 --> 05:46.400
+We're sending it over to the server and we're outputting the data that we're looking for.
+
+05:46.460 --> 05:47.400
+So that's great.
+
+05:47.420 --> 05:54.140
+And now next we're move we're ready to move on to the next step and the next step is going to be taking
+
+05:54.140 --> 05:59.870
+some of this information and putting it on her web page and then we're going to hook up the next API
+
+06:00.020 --> 06:00.980
+which is going to be YouTube.
+
+06:00.980 --> 06:02.620
+So it's going to be really interesting.
+
+06:02.780 --> 06:03.920
+So that's all coming up.
+
+06:03.920 --> 06:06.340
+So now try this out for yourself.
+
+06:06.500 --> 06:13.640
+Open up your editor create an input field and then grab that value from the input field and pass it
+
+06:13.730 --> 06:17.300
+into your API effectively making it dynamic.
+
+06:17.300 --> 06:22.130
+So if we do test you can see that we get different results being returned back.
+
+06:22.130 --> 06:24.040
+So try it out make sure it's working.
+
+06:24.050 --> 06:27.740
+Next lesson we're going to continue to build out this application.

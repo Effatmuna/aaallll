@@ -1,0 +1,385 @@
+WEBVTT
+
+00:00.800 --> 00:05.440
+Before we do styling lets make sure we can actually link it to the videos.
+
+00:05.540 --> 00:11.180
+And there was a little bit of a hint in the last lesson where we saw that if we do youtube so if we
+
+00:11.180 --> 00:17.860
+do it like this and then we attach the ID afterwards that should give us the URL to a video.
+
+00:17.870 --> 00:19.630
+Scrub the video ID.
+
+00:20.240 --> 00:21.830
+So if we slash it.
+
+00:22.010 --> 00:25.170
+So this should open up this video ID.
+
+00:25.290 --> 00:25.610
+OK.
+
+00:25.620 --> 00:32.920
+So we see that we can open up the YouTube video by doing this short enter and then the ID.
+
+00:32.960 --> 00:36.500
+So its the same thing up here you could do the long one as well if you want.
+
+00:36.500 --> 00:39.340
+And that actually gives you some more options for parameters.
+
+00:39.440 --> 00:43.020
+But we can send over and we can get the right video.
+
+00:43.160 --> 00:50.500
+So if we go to share we can see that there is that same short u r l which is for this particular video.
+
+00:50.690 --> 00:56.000
+And I just noticed also one thing that we're not actually searching for the term javascript within the
+
+00:56.000 --> 00:56.910
+you r l path.
+
+00:57.020 --> 01:01.880
+So let's update that and fix that so it was a little minor bug here where we never updated the term
+
+01:01.880 --> 01:02.390
+here.
+
+01:02.420 --> 01:05.160
+So this actually has to equal search term.
+
+01:06.050 --> 01:08.720
+And we'll break out of the string.
+
+01:08.720 --> 01:11.410
+Concatenate it and break back in.
+
+01:11.450 --> 01:16.420
+So let's try to just make sure that we are actually returning back javascript videos.
+
+01:16.520 --> 01:22.450
+So refresh search and now it does look like we were able to get javascript videos back in.
+
+01:22.820 --> 01:27.710
+So we're ready to move on to the next step so we see how we can link it to the videos.
+
+01:27.800 --> 01:33.890
+And now it's just a matter of making some styling the rest of this is going to be all styling.
+
+01:33.980 --> 01:36.550
+So if you want to skip through this you're welcome to do so.
+
+01:36.560 --> 01:42.240
+Or you can sit through and watch us do some styling apply some styling to these elements.
+
+01:42.440 --> 01:46.360
+There's one other thing that I still want to pick up before we continue.
+
+01:46.370 --> 01:49.430
+And that's going to be the video ID.
+
+01:49.580 --> 01:52.910
+So in order to get the video ID the path is going to be.
+
+01:53.000 --> 01:56.450
+So it's data items we can copy a little bit of the stuff here.
+
+01:58.780 --> 02:07.890
+So data items and instead of snippet we're grabbing the ID object and then within the ID object We've
+
+02:07.900 --> 02:09.420
+got video ID.
+
+02:09.700 --> 02:16.360
+So that should grab us our video ID and this will give us the ability to actually create a clickable
+
+02:16.360 --> 02:17.510
+you are l.
+
+02:17.530 --> 02:18.490
+So let's add that.
+
+02:18.700 --> 02:20.100
+So rough.
+
+02:20.260 --> 02:23.310
+And then in here this is where we're going to drop our.
+
+02:23.530 --> 02:30.700
+You are all so open it up on a new page and then we'll add it around at the thumbnail so the thumbnail
+
+02:30.700 --> 02:32.410
+is actually going to be the clickable one.
+
+02:32.710 --> 02:34.620
+Let's add in our you are l.
+
+02:34.660 --> 02:36.740
+So we know that with the YouTube videos.
+
+02:36.760 --> 02:42.650
+Let's go back and we'll grab that short format and we can paste that value.
+
+02:42.650 --> 02:48.580
+And now this is where we can make use of the ID because this is a like thing that changes for the path
+
+02:48.640 --> 02:57.340
+to all the videos and we just need to drop our ID in there and we should of course go and check it just
+
+02:57.340 --> 02:59.690
+to make sure that things are working so refresh.
+
+02:59.770 --> 03:00.450
+Click it.
+
+03:00.460 --> 03:06.160
+So now we've got a bunch of clickable parts there so we don't actually have the image we're actually
+
+03:06.160 --> 03:07.620
+still outputting the image.
+
+03:07.660 --> 03:12.760
+So let's fix that that we're actually going to output the image as an image.
+
+03:12.940 --> 03:14.880
+So we just use the image tags.
+
+03:14.890 --> 03:19.130
+Image source or we could just pull back to the thumbnail.
+
+03:19.450 --> 03:21.300
+Also add an alt.
+
+03:21.490 --> 03:24.020
+We can use the title for the altar as well.
+
+03:24.960 --> 03:26.630
+So we've already got it over here.
+
+03:26.660 --> 03:32.520
+It was just a matter of pasting it in and formatting getting it to look however you want to look so
+
+03:32.520 --> 03:33.450
+refreshed.
+
+03:33.450 --> 03:33.870
+Click.
+
+03:33.870 --> 03:35.690
+So now these are all clickable.
+
+03:35.970 --> 03:38.110
+So they open up the videos.
+
+03:39.000 --> 03:39.750
+So great.
+
+03:39.840 --> 03:44.210
+Next thing that we should do we need to wrap it so that we can pop them in line.
+
+03:44.250 --> 03:51.500
+So I'm going to give this one a class panel and go into our styling.
+
+03:51.520 --> 03:59.140
+So now we can apply some styling to the panel well give it a width of 25 percent.
+
+03:59.320 --> 04:05.590
+So they're all going to fall in line their display and we'll do inline block.
+
+04:06.550 --> 04:11.170
+So I should align them one after the other so horizontally aligned them because they're only going to
+
+04:11.170 --> 04:15.900
+be 25 percent across or so give them a uniform height.
+
+04:15.940 --> 04:22.240
+So maybe 120 picks because we do need to still add some text.
+
+04:22.340 --> 04:24.670
+Let's hide the overflow overflow.
+
+04:24.670 --> 04:25.230
+Hidden.
+
+04:25.570 --> 04:28.740
+So we don't have any content hanging outside of it.
+
+04:28.900 --> 04:29.350
+So there we go.
+
+04:29.350 --> 04:33.220
+So we've got essentially there it is it's popping up.
+
+04:33.220 --> 04:34.910
+I know my window is kind of small here.
+
+04:34.930 --> 04:38.120
+So if we get bigger we can see that things are working properly.
+
+04:39.060 --> 04:42.630
+We can also do something for the images and the panel as well.
+
+04:42.630 --> 04:43.700
+So we could do panel.
+
+04:43.710 --> 04:49.620
+I am Giese the images in there and we'll set to a width of 100 percent.
+
+04:49.860 --> 04:56.320
+So those fully across so that when we make it bigger our images are still there fully across.
+
+04:56.340 --> 05:01.410
+Now actually we're losing our text so we need to do something with that text.
+
+05:01.410 --> 05:02.290
+Let's go back in.
+
+05:02.310 --> 05:12.580
+And let's wrap our text will wrap it in a span Oler passing over is the title.
+
+05:12.660 --> 05:18.930
+Let me just make sure that we can grab the span properly so that looks like.
+
+05:18.930 --> 05:19.410
+So there we go.
+
+05:19.420 --> 05:21.570
+So it's starting to look a little bit better.
+
+05:21.600 --> 05:27.510
+We can obviously if we get bigger We're going to have some problems here that this is going to overlap
+
+05:27.900 --> 05:34.150
+so we might have to restrict the size of the images or we can move the text on top.
+
+05:34.390 --> 05:42.630
+So again and again depending on what you want to do you might want to place the text on top and that
+
+05:42.630 --> 05:45.900
+way we're always got the same width.
+
+05:46.050 --> 05:48.530
+And we also might want to set a default.
+
+05:48.630 --> 05:56.250
+And also what we can do is we can set some absolute's do a background background will set an R.G. be
+
+05:56.400 --> 05:59.020
+color so that we can use our G-B.
+
+05:59.250 --> 06:03.140
+And a lot of this is depending on what you prefer what works best for you.
+
+06:03.240 --> 06:10.620
+So to refresh and clean this up so we've got the span colors maybe what we want to do is we want to
+
+06:10.620 --> 06:12.300
+have another wrapper around there.
+
+06:12.420 --> 06:18.360
+Maybe I will set up a div and we'll give it a class and we'll give it a class of content and we'll close
+
+06:18.360 --> 06:22.830
+off that div and this way we can better identify that content.
+
+06:22.870 --> 06:25.790
+So instead of span this will just be content.
+
+06:26.190 --> 06:26.550
+So there we go.
+
+06:26.550 --> 06:28.470
+So that's a little bit better.
+
+06:28.500 --> 06:32.520
+And of course we can set the height of these as well now if we wanted to.
+
+06:32.520 --> 06:40.410
+So if we want to have at a set height and maybe what we can do is we can move it on top of that image
+
+06:40.590 --> 06:48.990
+so we can do like a zed index and also set position so set it as absolute position it might be a little
+
+06:48.990 --> 06:56.650
+bit too much but would set it up as not and will also set index so that it's actually above.
+
+06:56.910 --> 06:58.890
+So given that index of 100.
+
+06:59.010 --> 07:02.810
+And then we'll go over to this image and let's update the image as well.
+
+07:02.820 --> 07:06.970
+So it's actually moving outside of the main container.
+
+07:07.020 --> 07:09.940
+So we need to still have it all contained within there.
+
+07:10.050 --> 07:16.010
+So let's add another div as to a quick check on RH to make sure that it's rendering out properly.
+
+07:16.080 --> 07:19.950
+And so we've got the panel so the up should be 100 percent.
+
+07:20.100 --> 07:20.690
+So we go.
+
+07:20.700 --> 07:28.200
+So we've got text on top we've got the titles on top and if we click the images then we can go out to
+
+07:28.230 --> 07:29.240
+see the videos.
+
+07:29.370 --> 07:33.330
+And of course you probably want to style it however works best for you.
+
+07:33.330 --> 07:35.850
+This was just a simple suggestion on the styling.
+
+07:35.850 --> 07:37.580
+We also might want to do that.
+
+07:37.590 --> 07:40.240
+The content is with of 100 percent as well.
+
+07:40.260 --> 07:40.670
+So there we go.
+
+07:40.670 --> 07:42.830
+So that looks a little bit better.
+
+07:43.140 --> 07:45.190
+And try it for yourself.
+
+07:45.390 --> 07:47.270
+And of course the styling is optional.
+
+07:47.280 --> 07:50.190
+You can set it and make it look however you want.
+
+07:50.190 --> 07:54.810
+Maybe because we're working on a small screen maybe we want to make it a little bit smaller as well.
+
+07:54.810 --> 07:56.610
+So go ahead try it for yourself.
+
+07:56.640 --> 07:59.730
+And the main objective here is not really the styling.
+
+07:59.790 --> 08:04.470
+I know I spent quite a bit of time on that but the main objective is getting that content from YouTube
+
+08:04.470 --> 08:06.820
+and then outputting it within your web page.
+
+08:06.990 --> 08:10.190
+So go ahead set that up on your own page.
+
+08:10.200 --> 08:14.870
+And next we're going to do a quick overview of this application and how it works.
+
+08:14.890 --> 08:15.840
+That's coming up.

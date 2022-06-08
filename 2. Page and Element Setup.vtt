@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00.820 --> 00:05.310
+This lesson we're going to be setting up and preparing for our application to come.
+
+00:05.320 --> 00:07.950
+So we need to have some h t M-L here.
+
+00:08.530 --> 00:13.010
+Creating a div give it an idea of output.
+
+00:13.130 --> 00:17.830
+This is where our content is going to be output because we're loading some dynamic content and we need
+
+00:17.830 --> 00:18.960
+a place to put it.
+
+00:18.970 --> 00:23.750
+We also need a way to initiate our AJAX call.
+
+00:23.780 --> 00:26.610
+We're going to do this with just a simple input button.
+
+00:28.180 --> 00:30.390
+And also just going to use ID.
+
+00:30.460 --> 00:37.570
+So just do we can do something like search and also give it a value of search.
+
+00:37.570 --> 00:38.050
+So there we go.
+
+00:38.050 --> 00:41.970
+So we've got the basic mechanics that we need in order to get things running.
+
+00:42.070 --> 00:47.620
+And now we're ready to start implementing some javascript in order to add or event listener.
+
+00:47.770 --> 00:51.660
+And also just to make sure that everything is ready to go.
+
+00:51.910 --> 00:57.120
+So first of all let's do a window on load.
+
+00:58.000 --> 00:59.690
+And within this window on load.
+
+00:59.710 --> 01:05.860
+So whenever the window object loads then we're going to fire off a function and this function is going
+
+01:05.860 --> 01:08.680
+to add our event listeners.
+
+01:08.820 --> 01:16.570
+So let's select our elements so document get element by id cause we do have an ID for it and the ID
+
+01:16.570 --> 01:17.650
+is search.
+
+01:17.860 --> 01:21.670
+So whenever somebody clicks the search button we want to add an event listener.
+
+01:21.700 --> 01:23.140
+So that's our event listener.
+
+01:23.200 --> 01:29.190
+Make this a little bit bigger so that you can see the full statement there on one line of code.
+
+01:29.230 --> 01:30.760
+Click.
+
+01:30.890 --> 01:38.450
+And then when it gets clicked then what we're going to do is we're going to say show results.
+
+01:38.480 --> 01:41.470
+So we'll create a function for our show results.
+
+01:41.540 --> 01:42.030
+So there we go.
+
+01:42.050 --> 01:45.000
+So we're all set to create our function.
+
+01:45.080 --> 01:51.200
+So next because we're calling to a function called show results we need to create that function and
+
+01:51.200 --> 01:55.660
+we don't need to pass in any parameters because all of this is going to be done on the fly.
+
+01:55.910 --> 02:01.540
+So and here let's just do a console log and clicked.
+
+02:01.910 --> 02:07.400
+Usually what I like to do is I like to use console log in order to make sure that everything is hooked
+
+02:07.400 --> 02:08.670
+up properly.
+
+02:08.840 --> 02:15.110
+What we want to happen is the user to have a button here that they can click and when they click that
+
+02:15.110 --> 02:22.620
+button then it fires off the event and returns back this function which is the console log clicked.
+
+02:22.760 --> 02:24.920
+And we're not going to be making use of output yet.
+
+02:24.920 --> 02:31.350
+And also later on we're also going to have to add another input so that the user can actually search
+
+02:31.410 --> 02:32.840
+for whatever they're looking for.
+
+02:32.940 --> 02:35.980
+But for now we're going to keep the SAYS is and try it.
+
+02:35.980 --> 02:37.370
+So it's always the first step.
+
+02:37.410 --> 02:39.960
+Make sure that everything is working.
+
+02:39.960 --> 02:43.110
+So you've got your core mechanics up and ready to run.
+
+02:43.110 --> 02:45.170
+The reason I added the window on load.
+
+02:45.270 --> 02:51.180
+Usually I like to make sure that the document has loaded so window on it is usually good enough to add
+
+02:51.180 --> 02:52.640
+in those that listeners.
+
+02:52.650 --> 02:57.780
+You could also just do it by document Get elements by id search and then add in that event listener
+
+02:57.870 --> 02:58.640
+as well.
+
+02:58.680 --> 03:04.320
+It's going to work most of the time in case you put your javascript above within the head section.
+
+03:04.350 --> 03:10.620
+It's always a good idea to make sure that your document object has loaded before you try to select those
+
+03:10.680 --> 03:12.380
+elements in that event listeners.
+
+03:12.600 --> 03:14.380
+So that's it for the first lesson.
+
+03:14.490 --> 03:15.990
+And now it's your turn.
+
+03:15.990 --> 03:21.180
+So go to your editor open up your editor whichever editor of choice you're using.
+
+03:21.210 --> 03:27.840
+And the reason I like to use brackets is because it's got this this button here which is the live server.
+
+03:27.870 --> 03:32.640
+So this is available or life preview and it's available within brackets.
+
+03:32.790 --> 03:36.230
+And basically what it does is it gives you an IP address.
+
+03:36.270 --> 03:42.830
+So instead of using the protocol the file protocol which normally if we opened up our age to a mail
+
+03:42.870 --> 03:45.740
+page in the browser we'd be using the file protocol.
+
+03:45.810 --> 03:51.870
+It allows us to have an age to the protocol and this is important to understand for Ajax because you
+
+03:51.870 --> 03:55.500
+will depending on the browser encounter some errors.
+
+03:55.560 --> 03:58.490
+Occasionally if you're trying to use different protocols.
+
+03:58.590 --> 04:05.400
+So it's always good to stay with the HTP protocol or set up a local server and run it off of there so
+
+04:05.400 --> 04:06.910
+run your file off of there.
+
+04:07.260 --> 04:13.010
+So next lesson we're ready to jump in and start connecting and adding even more functionality.
+
+04:13.020 --> 04:15.590
+So all of that is coming up in the next lesson.

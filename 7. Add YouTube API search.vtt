@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.230 --> 00:05.390
+Are you ready to put those YouTube results into your web page.
+
+00:05.390 --> 00:07.220
+So it looks kind of messy here.
+
+00:07.250 --> 00:10.910
+And this is Jaison being returned with an AJ saw format.
+
+00:10.910 --> 00:17.060
+So when we put it into our application where we have that parse Jaison what will turn it into a usable
+
+00:17.060 --> 00:18.460
+object in javascript.
+
+00:18.560 --> 00:22.930
+We have or you are Ehle that we want to make use of I can get rid of the key here at this point.
+
+00:23.270 --> 00:28.640
+So now we can create our you are l that we want to use in order to send our
+
+00:31.310 --> 00:32.730
+API requests.
+
+00:32.810 --> 00:39.270
+So I'm going to call it you are l one and I'll bring all of this in.
+
+00:39.270 --> 00:40.120
+It was very long.
+
+00:40.150 --> 00:41.250
+You usually are.
+
+00:41.530 --> 00:43.710
+So when they have these keys.
+
+00:44.750 --> 00:45.200
+So there you go.
+
+00:45.200 --> 00:46.750
+So we've got our you are l.
+
+00:46.790 --> 00:57.600
+And now let's use our reusable Ajax function send the parameters and we can do that function response
+
+00:57.600 --> 01:00.190
+as well or this time.
+
+01:00.210 --> 01:07.430
+Spice it up will do data as our returning value and then we'll just console log data for now.
+
+01:07.800 --> 01:14.820
+And as we sift through there we can we can look through it and then we can see how we want to output
+
+01:14.820 --> 01:17.740
+it on our Web page and what we want to output.
+
+01:18.570 --> 01:25.230
+So we see that we get all of that information and it's all contained within items so we can do something
+
+01:25.260 --> 01:29.910
+where we've got data and items because that's what we ultimately want to look at.
+
+01:30.040 --> 01:31.170
+Let's try that again.
+
+01:31.290 --> 01:36.120
+So we get an array and because we're requesting 10 we're getting 10 back.
+
+01:36.120 --> 01:37.440
+We don't actually need 10.
+
+01:37.510 --> 01:42.750
+Well of course you could customize the application but for this time we're going to be using the for
+
+01:44.250 --> 01:50.930
+loop through these and pull back the data and we already saw how we can loop through an array.
+
+01:50.940 --> 01:53.690
+So a number of different ways to do that in javascript.
+
+01:53.820 --> 01:55.440
+What we used over here.
+
+01:55.560 --> 02:05.610
+So for variable x and data let's console log out what we've got here what we've essentially got to work
+
+02:05.610 --> 02:15.400
+with so copy that's and X because we know that X is the index we saw that last time we clean this up
+
+02:18.320 --> 02:20.220
+let's try this out.
+
+02:20.240 --> 02:22.110
+So refresh.
+
+02:22.190 --> 02:28.010
+So now iterates through all four and we can better see what we want to return back and that's the good
+
+02:28.010 --> 02:32.930
+thing and nice thing about a lot of these API is the data is returned back in that same format so you
+
+02:32.930 --> 02:37.700
+don't have to worry about it that if you grab it from one the format might be different for the next
+
+02:37.700 --> 02:37.870
+one.
+
+02:37.870 --> 02:44.150
+So we saw that in the Wikipedia because we weren't really iterating through the same values we're iterating
+
+02:44.150 --> 02:47.090
+through different sets of values that were being returned.
+
+02:47.090 --> 02:48.600
+So that's why we had to do that there.
+
+02:48.620 --> 02:55.770
+But over here we can get away with it that we can pull back the snippet information and it's got thumbnails.
+
+02:55.850 --> 03:01.400
+It's got the description and the title so perfect this is exactly what we want to make use of within
+
+03:01.430 --> 03:02.820
+our response data.
+
+03:03.050 --> 03:11.150
+And as we're looping through it let's first set up some variables so do title and then afterwards we'll
+
+03:11.150 --> 03:13.210
+figure out how we want to output that.
+
+03:13.220 --> 03:18.910
+So title is variable's title and going down into the object.
+
+03:19.010 --> 03:22.470
+Do you know how to find title How to get the title out of this.
+
+03:22.640 --> 03:27.590
+So open up snippet so we know when to connect to snippet is next.
+
+03:27.770 --> 03:34.330
+And once we open the snippet object then we've got the title there as.
+
+03:34.400 --> 03:38.170
+So we've got the channel title and then we've got the video title there.
+
+03:38.210 --> 03:39.760
+So this is just title.
+
+03:40.160 --> 03:43.130
+And also let's get the video description.
+
+03:43.400 --> 03:44.740
+So we've got the description.
+
+03:44.750 --> 03:47.050
+So that's also contained within snippet.
+
+03:47.150 --> 03:56.780
+So we grab in the title the description and then lastly let's do thumbnail on just the thumb and this
+
+03:56.780 --> 04:04.580
+one is also within snippet but it's within another object within snippets so it's within snippet and
+
+04:04.620 --> 04:10.220
+then we have to go down one more level which is the thumbnails and we've got one more level to go down
+
+04:10.220 --> 04:11.450
+so it's the URL.
+
+04:11.900 --> 04:17.270
+So we've already got a value for output over here where we've already set that up so we can concatenate
+
+04:17.270 --> 04:20.350
+to it if we're setting up a brand new variable.
+
+04:20.350 --> 04:23.780
+I don't concatenate to it just set that up as equals.
+
+04:23.810 --> 04:26.840
+So define it first and then you can add to it.
+
+04:26.840 --> 04:29.310
+So it always has to have a starting point there.
+
+04:30.080 --> 04:33.890
+So let's say in this case and we'll format it after.
+
+04:33.950 --> 04:36.080
+Just make sure that it's working first.
+
+04:36.080 --> 04:42.050
+So title and next description and I'll add another line break.
+
+04:42.050 --> 04:47.420
+So a lot of the stuff we're going to be updating and changing this is just to make sure that we're actually
+
+04:47.420 --> 04:54.250
+pulling back some type of data and some type of content and then we'll make use of it within our application.
+
+04:54.260 --> 04:54.900
+So there we go.
+
+04:54.920 --> 05:00.070
+So let's try this out and search for javascript's So what happens.
+
+05:00.350 --> 05:07.550
+So we see that we get this YouTube information so we get the get some information about each video and
+
+05:07.580 --> 05:11.050
+we get a title so maybe we don't need the description.
+
+05:11.090 --> 05:13.050
+I'll keep it in there for now.
+
+05:13.100 --> 05:16.930
+But we're not going to actually make use of it within what we're going to build out next.
+
+05:16.940 --> 05:22.780
+So next it's just a matter of presenting that content in a usable format for the user.
+
+05:22.910 --> 05:32.150
+So let's build out an element here with four different columns and then each column will put the image
+
+05:32.480 --> 05:37.480
+and we'll put the title underneath and then we'll have a clickable link.
+
+05:37.600 --> 05:41.380
+So make the image clickable to go out to view the video.
+
+05:41.510 --> 05:46.400
+So all of that is coming up and they've got the payoff there for the video so it's a little bit of a
+
+05:46.400 --> 05:47.700
+hint.
+
+05:47.780 --> 05:51.690
+So try this out for yourself and build this so.
+
+05:51.710 --> 05:54.290
+So do something with the YouTube data that's coming in.
+
+05:54.470 --> 05:56.920
+And next is just styling the output.
+
+05:56.990 --> 05:57.570
+So it's coming up.
